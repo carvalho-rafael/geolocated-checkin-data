@@ -18,7 +18,7 @@
         function serialize(data) {
             const result = [['Lat', 'Long', 'Message']]
             const points = data.map(item => {
-                return [ parseFloat(item.lat), parseFloat(item.lon), `userId: ${item.userId} \r\n placeId: ${item.placeId}`]
+                return [ parseFloat(item.lat), parseFloat(item.lon), `userId: ${item.userId} placeId: ${item.placeId} message: ${item.message}`]
             });
 
             result.push(...points)
