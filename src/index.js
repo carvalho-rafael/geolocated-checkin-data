@@ -15,7 +15,7 @@ const file = path.join(__dirname, 'checkin_data_reduced.txt');
 let obj;
 
 fs.readFile(file, { encoding: 'utf-8' }, (err, data) => {
-    const lines = data.split('\r\n', 3)
+    const lines = data.split('\r\n')
     obj = lines.map(line => {
         const register = line.split(/[\t]/);
         return {
