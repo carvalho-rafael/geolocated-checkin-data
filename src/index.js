@@ -1,7 +1,10 @@
 const fs = require('fs');
 const express = require('express')
+const cors = require('cors')
 
 const app = express()
+
+app.use(cors())
 
 const server = app.listen(process.env.PORT || 5000)
 
